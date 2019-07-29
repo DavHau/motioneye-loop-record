@@ -1,5 +1,4 @@
-### Script for motion / motioneye / motionEyeOs or any other Surveillance systems to enable loop recoding
-
+### Script to enable loop recording on motion / motioneye / motionEyeOs or any other Surveillance system
 #### Motivation:
 When setting up motionEyeOs on a raspberry pi zero recently, i noticed that motionEyeOs lacks a functionality called 'Loop Recoding', a common mechanism for surveillance systems that prevents the storage from running full by deleting the oldest recordings whenever free space gets scarce. There is a 'delete footage after X days' functionality, but since the amount of footage recorded within a specific time is depending on how frequent motion is detected, there is no guarantee that the storage will not run full even when using this setting.
 I know that there are open feature requests for adding loop recording on [motioneyeos](https://github.com/ccrisan/motioneyeos), but since this is not done yet, i wrote this little addon script that adds the Loop Recoding functionality to your motionEyeOs. Though motionEyeOs is not required to run this script and it could also be used for any other surveillance system.
