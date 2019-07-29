@@ -53,9 +53,10 @@ def main():
     Or just execute it periodically via cron.
     """)
     parser.add_argument('--dir', '-d', type=str, required=True)
-    parser.add_argument('--space', '-s', type=int, required=True, help='minimum space in MB to keep free', metavar='megabytes')
+    parser.add_argument('--space', '-s', type=int, required=True, help='minimum space in MB to keep free', metavar='MEGABYTES')
     args = parser.parse_args()
-    free_up_space(args.space, args.dir)
+    if get_free_space_mb(args.dir) < args.space:
+        free_up_space(args.space, args.dir)
 
 
 if __name__ == '__main__':
